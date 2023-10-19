@@ -1,6 +1,7 @@
 # Negative_regulation_of_PIF4
 
 This repository contains a MATLAB code, regarding the solutions of Eq. 1 & 2 in the SI, "Threshold-dependent negative autoregulation of PIF4 gene expression optimizes growth and fitness in Arabidopsis"
+
 Sreya Das, Vikas Garhwal, Krishanu Mondal, Dipjyoti Das and Sreeramaiah N. Gangappa*
  
 
