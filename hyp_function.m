@@ -2,7 +2,7 @@
 
 % p_self included here only
 function [diff] = model(t,dp,p_b,m_b,k_r,d_e,m_c,p_cl,p_cd,d_c...
-    ,m_p,p_p,p_pe,d_p,k_pc,d_pb,p_g,k_g,p_gp,p_ge,p_gb,p_gh,p_hc,p_f,p_fp,d_f,k_0,p_0,D,p_t1,k_01,m_f, ...
+    ,m_p,p_p,p_pe,d_p,k_pc,d_pb,p_g,k_g,p_gp,p_ge,p_gb,p_f,p_fp,d_f,k_0,p_0,D,p_t1,k_01,m_f, ...
     d_ec) 
 
 
@@ -79,7 +79,7 @@ diff = [p_b*L*(m_b - B) - k_r*B
        p_e - d_ec*E*C - d_e*E
        m_c*(p_cl*L + p_cd*(1-L))- d_c*C
        p_s2 - (d_p/(1+k_pc*C))*P - d_pb*B*P
-       p_g + k_g *((p_gp*P)/(1+p_ge*E+p_gb*B+((p_gh)/(1+p_hc*C))))
+       p_g + k_g *((p_gp*P)/(1+p_ge*E+p_gb*B))
        p_s1 - d_f*F];
 
   
