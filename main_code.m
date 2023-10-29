@@ -36,7 +36,7 @@ p_fp = 22;
 d_f = 0.0009;
 k_0 = 10;
 p_0 = 25;
-k_01 = 10;
+k_01 = 90;
 m_f = 1;
 d_ec = 0.01;
  
@@ -79,9 +79,9 @@ j = j+1;
 tc1 = 0;   %phyB initial condition
 tc2 = 0;   %ELF3 initial condition        
 tc3 = 0;   %COP1 initial condition        
-tc4 = 0;   
-tc5 = 0;
-tc6 = 0;
+tc4 = 0;   %PIF4 initial condition
+tc5 = 0;   %Hypocotyl growth initial condition
+tc6 = 0;   %GUS activity initial condition
 
 tc = [tc1 tc2 tc3 tc4 tc5 tc6];
 
