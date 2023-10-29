@@ -12,20 +12,21 @@ xmin = 0;
 
 color = ["#000000" "#FF0000" "#0072BD" "#EDB120"];
 
+%parameter Values
 
-p_b = 10.0;
+p_b = 10.0;       %Light-induced activation rate of phyB
 m_b = 1;
-k_r = 0.232;
-d_e = 27.2;
+k_r = 0.232;      %Deactivation rate of phyB in dark
+d_e = 27.2;       %Decay rate of ELF3
 m_c =  1;
-p_cl = 1.00;
-p_cd = 112;
-d_c  = 1.79;
-p_p  = 1;
-p_pe = 0.332;
-d_p = 4.91;
-k_pc = 34.3;
-d_pb = 0.313;
+p_cl = 1.00;      %Production rate of COP1 in light
+p_cd = 112;       %Production rate of COP1 in dark
+d_c  = 1.79;      %Decay rate of COP1
+p_p  = 1;         %Production rate of PIF4
+p_pe = 0.332;     %Intensity of ELF3’s inhibition of PIF4 production
+d_p = 4.91;       %Decay rate of PIF4
+k_pc = 34.3;      %Intensity of COP1’s inhibition of PIF4 degradation
+d_pb = 0.313;     %Inhibition rate of PIF4 by phyB
 p_g = 0.009;
 k_g = 0.113;
 p_gp = 2.93;
@@ -139,7 +140,7 @@ ylabel('Growth','Fontsize',14)
 xlim([1 24])
 
 txt = ['Hypocotyl Length vs Day Length Graph,Model Code No - 18a, Mutp - 0.12,1,4,8.5 and' ...
-    ' threshold value = 0.15(p_t_1) and P_s_e_l_f = 25'];
+    ' threshold value = 0.2(p_t_1) and P_s_e_l_f = 25'];
 sgtitle(txt);
 
 
