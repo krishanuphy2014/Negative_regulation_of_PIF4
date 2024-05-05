@@ -35,9 +35,9 @@ p_gb = 10.7;      %Intensity of phyB’s inhibition of hypocotyl growth
 p_f = 450;        %Production rate of GUS 
 p_fp = 22;        %Intensity of PIF4’s inhibition of GUS expression
 d_f = 0.0009;     %Decay rate of GUS
-k_0 = 10;         %Basal rate of GUS production above the PIF4 threshold concentration
+k_0 = 10;         %Basal rate of GUS production
 p_0 = 25;         %Intensity of autoinhibition for PIF4 synthesis
-k_01 = 10;        %Basal rate of GUS production below the PIF4 threshold concentration
+k_01 = k_0;       
 d_ec = 0.01;      %Inhibition rate of ELF3 by COP1
  
 p_th = [0.2 0.04 0.2 1.3];       %Threshold Value for four genotype
