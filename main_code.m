@@ -37,10 +37,10 @@ p_fp = 22;        %Intensity of PIF4’s inhibition of GUS expression
 d_f = 0.0009;     %Decay rate of GUS
 k_0 = 10;         %Basal rate of GUS production above the PIF4 threshold concentration
 p_0 = 25;         %Intensity of autoinhibition for PIF4 synthesis
-k_01 = 90;        %Basal rate of GUS production below the PIF4 threshold concentration
+k_01 = 10;        %Basal rate of GUS production below the PIF4 threshold concentration
 d_ec = 0.01;      %Inhibition rate of ELF3 by COP1
  
-p_th = [0.2 0.2 0.2 0.2];       %Threshold Value for four genotype
+p_th = [0.2 0.04 0.2 1.3];       %Threshold Value for four genotype
 
 
 
@@ -52,21 +52,21 @@ p_th = [0.2 0.2 0.2 0.2];       %Threshold Value for four genotype
 
 %Experimental Data
 
-exp_D = [8 16];                         %Day legth
-exp_hyp = [4.2228 2.269105263];         %Hypocotyle length for wildtype(WT)
-exp_dev = [0.278813577 0.238650813];    %standard devation of the experimental measurement of hypocotyl for WT 
- 
-exp_hyp_mut = [2.64675 1.5195];              %Hypocotyl legth of pif4-101
-exp_hyp_mut_dev = [0.250230815 0.221709744]; %standard devation of the experimental measurement of hypocotyl for pif4-101 
+exp_D = [4 8 12 16];                         %Day legth
+exp_hyp = [7.3538 4.3948 2.68285 2.0395];    %Hypocotyle length for wildtype(WT)
+exp_dev = [0.668411125 0.406120101 0.277211163 0.190259795]; %standard devation of the experimental measurement of hypocotyl for WT 
 
-exp_hyp_oe1 = [8.164526316 3.3828];          %Hypocotyl legth of PIF4-OE1
-exp_hyp_oe1_dev = [0.705548673 0.341386739]; %standard devation of the experimental measurement of hypocotyl for PIF4-OE1  
+exp_hyp_mut = [5.532076923 2.7465 2.177263158 1.208666667];  %Hypocotyl legth of pif4-101
+exp_hyp_mut_dev  = [0.74006649 0.361545546 0.372886912 0.184124628]; %standard devation of the experimental measurement of hypocotyl for pif4-101 
 
-exp_hyp_oe2 = [10.07135 6.3037];             %Hypocotyl legth of PIF4-OE2
-exp_hyp_oe2_dev = [0.820796101 0.544857312]; %standard devation of the experimental measurement of hypocotyl for PIF4-OE2
+exp_hyp_oe1 = [12.2035 7.22295 5.8414 3.5197];  %Hypocotyl legth of PIF4-OE1
+exp_hyp_oe1_dev = [0.365437409 0.785811647 0.455545179 0.302029469];%standard devation of the experimental measurement of hypocotyl for PIF4-OE1  
+
+exp_hyp_oe2 = [13.16542857 11.64195 9.8363 6.335]; %Hypocotyl legth of PIF4-OE2
+exp_hyp_oe2_dev = [1.291944162 0.564585745 0.522554367 0.544857312];  %standard devation of the experimental measurement of hypocotyl for PIF4-OE2
 
 m=0;
-for m_p = [1 0.12 4 8.5]
+for m_p = [1 0.65 4 5.9]
 
     p_t1 = p_th(i)
     i = i+1;
@@ -139,8 +139,8 @@ xlabel('Day Length(Hour)','Fontsize',14)
 ylabel('Growth','Fontsize',14)
 xlim([1 24])
 
-txt = ['Hypocotyl Length vs Day Length Graph,Model Code No - 18a, Mutp - 0.12,1,4,8.5 and' ...
-    ' threshold value = 0.2(p_t_1) and P_s_e_l_f = 25'];
+txt = ['Hypocotyl Length vs Day Length Graph,Model Code No - 18a, Mutp - 0.04,1,4,5.9 and' ...
+    '  and P_s_e_l_f = 25'];
 sgtitle(txt);
 
 
